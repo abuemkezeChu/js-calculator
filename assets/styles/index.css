@@ -73,7 +73,6 @@ button {
 #multiply,
 #minus,
 #plus,
-#leftarrow,
 #equal-to {
   background-color: #dde1f9;
 }
@@ -89,6 +88,6 @@ button {
 #eight,
 #nine,
 #float,
-#backkspace {
+#backspace {
   background-color: #f4f3f9;
 }
