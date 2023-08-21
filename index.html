@@ -10,29 +10,29 @@
   <main class="container">
     <h1>Basic Calculator</h1>
     <div class="screen">
-      <input class="" type="text">
+      <input id="display" type="text">
     </div>
     <div class="keys">
-      <button id="all-clear">AC</button>
-      <button id="brackets">( )</button>
-      <button id="percent">&percnt;</button>
-      <button id="divide">&divide;</button>
-      <button id="seven">7</button>
-      <button id="eight">8</button>
-      <button id="nine">9</button>
-      <button id="multiply">&ast;</button>
-      <button id="four">4</button>
-      <button id="five">5</button>
-      <button id="six">6</button>
-      <button id="minus">&minus;</button>
-      <button id="one">1</button>
-      <button id="two">2</button>
-      <button id="three">3</button>
-      <button id="plus">&plus;</button>
-      <button id="zero">0</button>
-      <button id="float">.</button>
-      <button id="backspace">&leftarrow;</button>
-      <button id="equal-to">&equals;</button>
+      <button value="AC" id="all-clear" onclick="clearScreen()">AC</button>
+      <button id="brackets" value="()" onclick="displayScreen('()')">()</button>
+      <button id="percent" value="%" onclick="displayScreen('%')">&percnt;</button>
+      <button id="divide" value="/" onclick="displayScreen('/')">&divide;</button>
+      <button id="seven" value="7" onclick="displayScreen('7')">7</button>
+      <button id="eight" value="8" onclick="displayScreen('8')">8</button>
+      <button id="nine" value="9" onclick="displayScreen('9')">9</button>
+      <button id="multiply" value="*" onclick="displayScreen('*')">&ast;</button>
+      <button id="four" value="4" onclick="displayScreen('4')">4</button>
+      <button id="five" value="5" onclick="displayScreen('5')">5</button>
+      <button id="six" value="6" onclick="displayScreen('6')">6</button>
+      <button id="minus" value="-" onclick="displayScreen('-')">&minus;</button>
+      <button id="one" value="1" onclick="displayScreen('1')">1</button>
+      <button id="two" value="2" onclick="displayScreen('2')">2</button>
+      <button id="three" value="3" onclick="displayScreen('3')">3</button>
+      <button id="plus" value="+" onclick="displayScreen('+')">&plus;</button>
+      <button id="zero" value="0" onclick="displayScreen('0')">0</button>
+      <button id="float" value="." onclick="displayScreen('.')">.</button>
+      <button id="backspace">DELL</button>
+      <button id="equal-to" value="=" onclick="calculate()">&equals;</button>
     </div>
   </main>
   <script src="assets/scripts/index.js"></script>
