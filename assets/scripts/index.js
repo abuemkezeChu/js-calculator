@@ -29,6 +29,7 @@ const backspace = () => {
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
+    const erase = backspace()
     switch (button.value) {
       case 'AC':
         clearScreen()
@@ -39,7 +40,6 @@ buttons.forEach(button => {
         break
 
       case 'DEL':
-        const erase = backspace()
         display.value = erase
         break
 
