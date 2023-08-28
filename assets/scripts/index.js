@@ -13,11 +13,24 @@ const displayScreen = (value) => {
   display.value += value
 }
 
+// evaluate expression
+const evaluateExpression = (expression) => {
+  const sanitizedExpression = expression.replace(/[^0-9+\-*/.%]/g, '')
+  const evaluated = new Function(`return ${sanitizedExpression}`)
+  return evaluated()
+}
+
 // calculate
 const calculate = () => {
-  const calc = display.value
-  const result = eval(calc)
-  display.value = result
+  try {
+    const calc = display.value
+    // Replace '%' with '/100*' to perform percentage calculations
+    const sanitizedCalc = calc.replace(/%/g, '/100*')
+    const result = evaluateExpression(sanitizedCalc)
+    display.value = result
+  } catch (error) {
+    display.value = 'Error'
+  }
 }
 
 //  backspace
@@ -41,6 +54,10 @@ buttons.forEach(button => {
 
       case 'DEL':
         display.value = erase
+        break
+
+      case '%':
+        displayScreen('%')
         break
 
       default:
