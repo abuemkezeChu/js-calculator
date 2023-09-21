@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #333333;
+  background-color: #333;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +20,7 @@ html {
 
 button {
   cursor: pointer;
-  border: 0px;
+  border: 0;
 }
 
 input[type="text"] {
@@ -28,7 +28,7 @@ input[type="text"] {
   text-align: end;
   width: 100%;
   color: #d2d2d2;
-  border: 0px;
+  border: 0;
   font-size: 4rem;
 }
 
@@ -37,7 +37,7 @@ input[type="text"] {
   border-radius: 50px;
   width: 100%;
   max-width: 280px;
-  background-color: #000000;
+  background-color: #000;
   padding: 2rem 1rem;
 }
 
@@ -68,7 +68,7 @@ input[type="text"] {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  color: #ffffff;
+  color: #fff;
   font-size: 20px;
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -83,7 +83,7 @@ input[type="text"] {
 }
 
 .btn.active {
-  background-color: #ffffff;
+  background-color: #fff;
   color: #f69906;
 }
 
@@ -101,7 +101,7 @@ input[type="text"] {
 }
 
 .btn-dark-grey:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 
 .btn-orange {
