@@ -71,4 +71,7 @@ const clearScreen = () => {
   output.value = '0'
 }
 
-clearBtn.addEventListener('click', clearScreen)
+clearBtn.addEventListener('click', () => {
+  clearScreen()
+  removeActive()
+})
