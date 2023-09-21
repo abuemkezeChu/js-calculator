@@ -2,7 +2,9 @@
 const output = document.getElementById('output')
 const operandBtn = document.querySelectorAll('button[data-type=operand]')
 const operatorBtn = document.querySelectorAll('button[data-type=operator]')
+const clearBtn = document.getElementById('clear')
 
+// handle numbers
 let isOperator = false
 operandBtn.forEach((button) => {
   button.addEventListener('click', (e) => {
@@ -19,14 +21,15 @@ operandBtn.forEach((button) => {
   })
 })
 
-let equation = []
-
+// remove class 'active' on current active button
 const removeActive = () => {
   operatorBtn.forEach((button) => {
     button.classList.remove('active')
   })
 }
 
+// handle calculations
+let equation = []
 operatorBtn.forEach((button) => {
   button.addEventListener('click', (event) => {
     removeActive()
@@ -61,3 +64,11 @@ operatorBtn.forEach((button) => {
     }
   })
 })
+
+// clear screen
+
+const clearScreen = () => {
+  output.value = '0'
+}
+
+clearBtn.addEventListener('click', clearScreen)
