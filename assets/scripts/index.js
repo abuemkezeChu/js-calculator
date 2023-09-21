@@ -1,3 +1,5 @@
+/*eslint no-eval: "error"*/
+/*eslint no-case-declarations: "error"*/
 'use strict'
 const output = document.getElementById('output')
 const operandBtn = document.querySelectorAll('button[data-type=operand]')
