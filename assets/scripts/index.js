@@ -1,5 +1,3 @@
-/* eslint no-eval: "error" */
-/* eslint no-case-declarations: "error" */
 'use strict'
 const output = document.getElementById('output')
 const operandBtn = document.querySelectorAll('button[data-type=operand]')
@@ -33,7 +31,7 @@ operatorBtn.forEach((button) => {
   button.addEventListener('click', (event) => {
     removeActive()
     event.currentTarget.classList.add('active')
-
+    const lastItem = equation[equation.length - 1]
     switch (event.target.value) {
       case '%':
         output.value = parseFloat(output.value) / 100
@@ -45,12 +43,12 @@ operatorBtn.forEach((button) => {
 
       case '=':
         equation.push(output.value)
+        // eslint-disable-next-line
         output.value = eval(equation.join(''))
         equation = []
         break
 
       default:
-        const lastItem = equation[equation.length - 1]
         if (['/', '*', '+', '-'].includes(lastItem) && isOperator) {
           equation.pop()
           equation.push(event.target.value)
